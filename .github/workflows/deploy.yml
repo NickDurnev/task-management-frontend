@@ -18,7 +18,7 @@ jobs:
       - name: Build React App
         run: yarn build
         env:
-          HTTPS: 'true'
+          HTTPS: "true"
           REACT_APP_BASE_URL: ${{ secrets.REACT_APP_BASE_URL }}
           PUBLIC_URL: ${{ secrets.PUBLIC_URL }}
 
@@ -27,3 +27,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
+          node-version: 14
